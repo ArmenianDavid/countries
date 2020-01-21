@@ -13,7 +13,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        text
+        Hello my friends
       </div>
     )
   }
