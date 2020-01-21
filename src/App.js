@@ -1,4 +1,6 @@
 import React from 'react';
+// components
+import Header from './Components/Header';
 
 class App extends React.Component{
   constructor(){
@@ -28,8 +30,8 @@ class App extends React.Component{
   render(){
     console.log(this.state.countries)
     return(
-      <div>
-        Hello my friends
+      <div className='container'>
+        <Header />
       </div>
     )
   }
