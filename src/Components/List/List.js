@@ -27,19 +27,34 @@ class List extends React.Component{
 
   render(){
     const { countries } = this.state
+    let str = 'gg'
+    let result = str.sup();
+    console.log(countries)
     return(
       <div>
         <table>
           <thead>
-            <th>
+            <tr>
               <td>name</td>
               <td>capital</td>
               <td>population</td>
-            </th>
+              <td>area</td>
+              <td>flag</td>
+            </tr>
           </thead>
 
           <tbody>
-              
+              {countries.map( country =>{
+                return(
+                  <tr key={country.name}>
+                    <td>{country.name}</td>
+                    <td>{country.capital}</td>
+                    <td>{country.population}</td>
+                    <td>{country.area}<span>{result}</span></td>
+                    <td><img src={country.flag} alt='flag' width='30px'/></td>
+                  </tr>
+                )
+              })}
           </tbody>
         </table>
       </div>
