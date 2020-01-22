@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+// components
+import './List.css';
 
 class List extends React.Component{
   constructor(){
@@ -11,25 +13,35 @@ class List extends React.Component{
   }
 
   componentDidMount(){
+    this.setState({
+      loading : true,
+    })
     fetch('https://restcountries.eu/rest/v2/all')
       .then(res => res.json())
       .then(json => {
         this.setState({
+          loading : false,
           countries : json,
         })
       })
       .catch(error =>{
         this.setState({
+          loading : false,
           error : error.errorMessage, 
         })
       })
   }
 
   render(){
-    const { countries } = this.state
-    let str = 'gg'
-    let result = str.sup();
+    const { countries , loading } = this.state
     console.log(countries)
+    if(loading){
+      return(
+        <div>
+          Loading...
+        </div>
+      )
+    } 
     return(
       <div>
         <table>
@@ -38,7 +50,7 @@ class List extends React.Component{
               <td>name</td>
               <td>capital</td>
               <td>population</td>
-              <td>area</td>
+              <td>area <span>km<sup>2</sup></span></td>
               <td>flag</td>
             </tr>
           </thead>
@@ -50,7 +62,7 @@ class List extends React.Component{
                     <td>{country.name}</td>
                     <td>{country.capital}</td>
                     <td>{country.population}</td>
-                    <td>{country.area}<span>{result}</span></td>
+                    <td>{country.area}<span></span></td>
                     <td><img src={country.flag} alt='flag' width='30px'/></td>
                   </tr>
                 )
