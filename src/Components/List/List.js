@@ -43,19 +43,18 @@ class List extends React.Component{
       )
     } 
     return(
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <td>name</td>
-              <td>capital</td>
-              <td>population</td>
-              <td>area <span>km<sup>2</sup></span></td>
-              <td>flag</td>
-            </tr>
-          </thead>
-
-          <tbody>
+      <div className='table-container'>
+        <table className='table'>
+            <thead className='table-header'>
+              <tr className='table-header-row'>
+                <td>name</td>
+                <td>capital</td>
+                <td>population</td>
+                <td>area <span>km<sup>2</sup></span></td>
+                <td>flag</td>
+              </tr>
+            </thead>
+           <tbody>
               {countries.map( country =>{
                 return(
                   <tr key={country.name}>
