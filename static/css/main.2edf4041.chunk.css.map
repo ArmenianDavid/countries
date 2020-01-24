@@ -1,1 +1,0 @@
-{"version":3,"sources":["Header.css"],"names":[],"mappings":"AAAA,kBACE,YAAa,CACb,sBAAuB,CACvB,wBACF","file":"main.2edf4041.chunk.css","sourcesContent":[".header-container{\r\n  display: flex;\r\n  justify-content: center;\r\n  text-transform: uppercase;\r\n}"]}
