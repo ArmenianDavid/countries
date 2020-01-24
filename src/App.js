@@ -3,6 +3,8 @@ import { Route , Switch, Router ,  } from 'react-router-dom'
 // components
 import Header from './Components/Header';
 import List from './Components/List/List';
+import TableUi from './Components/MaterialUi/Table'
+// material ui
 import MaterialUi from './Components/MaterialUi/MaterialUi';
 import Navigation from './Components/Navigation/Navigation'
 
@@ -16,7 +18,10 @@ class App extends React.Component{
 
         <Switch>
           <Route path='/material-ui' >
-            <MaterialUi />
+            
+              {/* <MaterialUi /> */}
+              <TableUi />
+         
           </Route>
           <Route path='/'>
             <List />
