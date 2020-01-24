@@ -1,6 +1,10 @@
 import React from 'react';
 // components
 import './List.css';
+// material-ui
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+
 
 
 class List extends React.Component{
@@ -38,9 +42,10 @@ class List extends React.Component{
     console.log(countries)
     if(loading){
       return(
-        <div>
-          Loading...
+        <div className='loading'>
+          <CircularProgress disableShrink />
         </div>
+        
       )
     } 
     return(
@@ -55,6 +60,7 @@ class List extends React.Component{
                 <td>flag</td>
               </tr>
             </thead>
+            
            <tbody>
               {countries.map( country =>{
                 return(
