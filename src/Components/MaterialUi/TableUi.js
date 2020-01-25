@@ -1,6 +1,6 @@
 import React from 'react';
 // components
-import '../List/List.css';
+import './TableUi.css'
 // material-ui
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Table from '@material-ui/core/Table';
@@ -56,32 +56,34 @@ class TableUi extends React.Component{
       )
     } 
     return(
-      <TableContainer component={Paper}>
-      <Table  size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Country</TableCell>
-            <TableCell align="right">capital</TableCell>
-            <TableCell align="right">population</TableCell>
-            <TableCell align="right">area</TableCell>
-            <TableCell align="right">flag</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {countries.map(country => (
-            <TableRow key={country.name}>
-              <TableCell component="th" scope="row">
-                {country.name}
-              </TableCell>
-              <TableCell align="right">{country.capital}</TableCell>
-              <TableCell align="right">{country.population}</TableCell>
-              <TableCell align="right">{country.area}</TableCell>
-              <TableCell align="right"> <img src={country.flag} width='20px'/></TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+      <div className='table-container-ui'>
+        <TableContainer  component={Paper}>
+          <Table  size="small" aria-label="a dense table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Country</TableCell>
+                <TableCell align="right">capital</TableCell>
+                <TableCell align="right">population</TableCell>
+                <TableCell align="right">area</TableCell>
+                <TableCell align="right">flag</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {countries.map(country => (
+                <TableRow key={country.name}>
+                  <TableCell component="th" scope="row">
+                    {country.name}
+                  </TableCell>
+                  <TableCell align="right">{country.capital}</TableCell>
+                  <TableCell align="right">{country.population}</TableCell>
+                  <TableCell align="right">{country.area}</TableCell>
+                  <TableCell align="right"> <img src={country.flag} alt='flag' width='30px'/></TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+      </TableContainer>
+    </div>
       // <div className='table-container'>
       //   <table className='table'>
       //       <thead className='table-header'>

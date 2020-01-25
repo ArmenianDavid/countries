@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route , Switch, Router ,  } from 'react-router-dom'
+import { Route , Switch  } from 'react-router-dom'
 // components
 import Header from './Components/Header';
 import List from './Components/List/List';
-import TableUi from './Components/MaterialUi/Table'
+import TableUi from './Components/MaterialUi/TableUi'
+import CountriesWithFilter from './Components/CountriesWithFilter/CountriesWithFilter'
 // material ui
-import MaterialUi from './Components/MaterialUi/MaterialUi';
 import Navigation from './Components/Navigation/Navigation'
 
 class App extends React.Component{
@@ -17,15 +17,9 @@ class App extends React.Component{
         <Navigation />
 
         <Switch>
-          <Route path='/material-ui' >
-            
-              {/* <MaterialUi /> */}
-              <TableUi />
-         
-          </Route>
-          <Route path='/'>
-            <List />
-          </Route>
+          <Route path='/countries-with-filter' component={CountriesWithFilter} />
+          <Route  path='/material-ui' component={TableUi} />
+          <Route path='/' component={List} exact />
         </Switch>
       </div>
     )

@@ -6,7 +6,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 
-
 class List extends React.Component{
   constructor(){
     super();
