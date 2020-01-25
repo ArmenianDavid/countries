@@ -44,9 +44,8 @@ class List extends React.Component{
         <div className='loading'>
           <CircularProgress disableShrink />
         </div>
-        
       )
-    } 
+    }
     return(
       <div className='table-container'>
         <table className='table'>
