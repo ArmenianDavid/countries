@@ -5,17 +5,27 @@ import './WithHooks.css';
 function WithHooks(){
 
   const [ data , setData ] = useState([])
+  const [ loading , setLoading ] = useState(false)
 
   useEffect(
-    () =>{
+     () => setLoading(true),
       fetch('https://restcountries.eu/rest/v2/all')
         .then(resp => resp.json())
-        .then(data => setData( data ))
-        .catch( error => console.log(error))
-    }
+        .then(data => {
+          setData( data )
+          return data
+        })
+        .catch( error => console.log(error)),
+     () => setLoading(false)
   )
 
-  
+  // if(loading){
+  //   return (
+  //     <div>
+  //       Loading....
+  //     </div>
+  //   )
+  // }
 
   return(
     <div className='with-hooks-container'>
