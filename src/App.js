@@ -5,8 +5,10 @@ import Header from './Components/Header';
 import List from './Components/List/List';
 import TableUi from './Components/MaterialUi/TableUi'
 import CountriesWithFilter from './Components/CountriesWithFilter/CountriesWithFilter'
+import WithHooks from './Components/WithHooks/WithHooks';
 // material ui
 import Navigation from './Components/Navigation/Navigation'
+
 
 class App extends React.Component{
   
@@ -17,6 +19,7 @@ class App extends React.Component{
         <Navigation />
 
         <Switch>
+          <Route path='/with-hooks' component={WithHooks}/>
           <Route path='/countries-with-filter' component={CountriesWithFilter} />
           <Route  path='/material-ui' component={TableUi} />
           <Route path='/' component={List} exact />
