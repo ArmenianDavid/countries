@@ -6,8 +6,8 @@ function WithHooks() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    useEffect(
-        () => setLoading(true),
+    useEffect(() => {
+        setLoading(true);
         fetch("https://restcountries.eu/rest/v2/all")
             .then((resp) => resp.json())
             .then((data) => {
@@ -17,8 +17,8 @@ function WithHooks() {
             })
             .catch((error) => {
                 console.log(error);
-            })
-    );
+            });
+    }, []);
 
     if (loading) {
         return (
