@@ -1,6 +1,7 @@
-.container-CountriesWithFilter{
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+.container-CountriesWithFilter {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 320px;
 }

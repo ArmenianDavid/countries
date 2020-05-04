@@ -18,9 +18,6 @@ class CountriesWithFilter extends React.Component {
         this.state = {
             loading: false,
             data: [],
-            table: {
-                minWidth: "320px",
-            },
             SearchLetter: "",
         };
     }
@@ -77,10 +74,7 @@ class CountriesWithFilter extends React.Component {
                         <SearchBar filterCountries={this.filterCountries} />
                     </div>
                     <TableContainer component={Paper}>
-                        <Table
-                            className={this.state.table}
-                            aria-label="simple table"
-                        >
+                        <Table aria-label="simple table">
                             <TableHead>
                                 <TableRow>
                                     <TableCell>name</TableCell>
