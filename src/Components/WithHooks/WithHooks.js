@@ -9,13 +9,13 @@ function WithHooks() {
     useEffect(
         () => setLoading(true),
         fetch("https://restcountries.eu/rest/v2/all")
-            .then(resp => resp.json())
-            .then(data => {
+            .then((resp) => resp.json())
+            .then((data) => {
                 setLoading(false);
                 setData(data);
                 return data;
             })
-            .catch(error => {
+            .catch((error) => {
                 console.log(error);
             })
     );
@@ -41,7 +41,7 @@ function WithHooks() {
                 </thead>
 
                 <tbody>
-                    {data.map(country => {
+                    {data.map((country) => {
                         return (
                             <tr key={country.name}>
                                 <td>{country.name}</td>

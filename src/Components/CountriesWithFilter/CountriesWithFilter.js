@@ -19,32 +19,34 @@ class CountriesWithFilter extends React.Component {
             loading: false,
             data: [],
             table: {
-                minWidth: "320px"
+                minWidth: "320px",
             },
-            SearchLetter: ""
+            SearchLetter: "",
         };
     }
 
-    filterCountries = event => {
+    filterCountries = (event) => {
         this.setState({
-            SearchLetter: event.currentTarget.id
+            SearchLetter: event.currentTarget.id,
         });
     };
 
     componentDidMount() {
         this.setState({
-            loading: true
+            loading: true,
         });
         setTimeout(
             () =>
                 fetch("https://restcountries.eu/rest/v2/all")
-                    .then(res => res.json())
-                    .then(json => json)
-                    .then(data => this.setState({ data: data, loading: false }))
-                    .catch(error => {
+                    .then((res) => res.json())
+                    .then((json) => json)
+                    .then((data) =>
+                        this.setState({ data: data, loading: false })
+                    )
+                    .catch((error) => {
                         this.setState({
                             error: error.errorMessage,
-                            loading: false
+                            loading: false,
                         });
                     }),
             1000
@@ -54,7 +56,6 @@ class CountriesWithFilter extends React.Component {
     render() {
         const { data, loading, SearchLetter } = this.state;
         let filteredData = data;
-        console.log(data);
         if (loading) {
             return (
                 <div>
@@ -64,8 +65,8 @@ class CountriesWithFilter extends React.Component {
         }
 
         if (SearchLetter) {
-             filteredData = data.filter(country => {
-              return  country.name[0].toLowerCase() === SearchLetter;
+            filteredData = data.filter((country) => {
+                return country.name[0].toLowerCase() === SearchLetter;
             });
         }
 
@@ -92,7 +93,7 @@ class CountriesWithFilter extends React.Component {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {filteredData.map(country => (
+                                {filteredData.map((country) => (
                                     <TableRow key={country.name}>
                                         <TableCell component="th" scope="row">
                                             {country.name}
