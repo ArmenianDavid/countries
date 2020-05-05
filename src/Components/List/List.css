@@ -1,9 +1,13 @@
 .table-container {
     display: flex;
     justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+    max-width: 90vw;
 }
 .table {
     background-color: #8f8fa3;
+    width: 100%;
 }
 .table-header {
     background-color: #67677e;

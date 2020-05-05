@@ -69,7 +69,7 @@ class CountriesWithFilter extends React.Component {
 
         return (
             <div className="container-CountriesWithFilter">
-                <div>
+                <div className="countriesWithFilter">
                     <div>
                         <SearchBar filterCountries={this.filterCountries} />
                     </div>

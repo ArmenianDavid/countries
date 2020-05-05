@@ -1,8 +1,14 @@
-.with-hooks-container{
-  display: flex;
-  justify-content: center;
+.with-hooks-container {
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+    max-width: 90vw;
 }
-.loading-container{
-  display: flex;
-  justify-content: center;
+.table {
+    width: 100%;
+}
+.loading-container {
+    display: flex;
+    justify-content: center;
 }

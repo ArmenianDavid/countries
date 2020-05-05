@@ -30,7 +30,7 @@ function WithHooks() {
 
     return (
         <div className="with-hooks-container">
-            <table>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>Country</th>
