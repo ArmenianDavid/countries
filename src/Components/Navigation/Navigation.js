@@ -1,9 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 // components
 import "./Navigation.css";
-// Material ui
-import Button from "@material-ui/core/Button";
+import MenuItem from "./MenuItem";
 
 const NAVIGATION_MENU_ITEMS = [
     {
@@ -29,18 +27,7 @@ const Navigation = (props) => {
         <div className="navigation-container">
             <div className="navigation">
                 {NAVIGATION_MENU_ITEMS.map(({ title, path }) => {
-                    return (
-                        <div key={title}>
-                            <Link style={{ textDecoration: "none" }} to={path}>
-                                <Button
-                                    color="primary"
-                                    aria-label="outlined primary "
-                                >
-                                    {title}
-                                </Button>
-                            </Link>
-                        </div>
-                    );
+                    return <MenuItem key={title} title={title} path={path} />;
                 })}
             </div>
         </div>
