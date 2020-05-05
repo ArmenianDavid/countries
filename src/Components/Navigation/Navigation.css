@@ -1,10 +1,29 @@
-.navigation-container{
-  display : flex;
-  justify-content: center;
-  margin-bottom: 1em;
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
 }
 
-.loading{
-  display : flex;
-  justify-content: center;
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
+/* @media max 600 */
+@media only screen and (max-width: 600px) {
+    .navigation {
+        font-size: 14px;
+    }
+}
+
+/* @media max 450 */
+@media only screen and (max-width: 450px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
 }
