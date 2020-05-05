@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 // components
+import "./App.css";
 import Header from "./Components/Header/Header";
 import List from "./Components/List/List";
 import TableUi from "./Components/MaterialUi/TableUi";
