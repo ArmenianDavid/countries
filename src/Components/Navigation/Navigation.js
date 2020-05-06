@@ -5,11 +5,11 @@ import MenuItem from "./MenuItem";
 
 const NAVIGATION_MENU_ITEMS = [
     {
-        title: "countries",
+        title: "countries with class",
         path: "/",
     },
     {
-        title: "material ui",
+        title: "countries with material ui",
         path: "/material-ui",
     },
     {
@@ -17,7 +17,7 @@ const NAVIGATION_MENU_ITEMS = [
         path: "/countries-with-filter",
     },
     {
-        title: "with hooks",
+        title: "countries with hooks",
         path: "/with-hooks",
     },
 ];
