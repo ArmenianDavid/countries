@@ -7,4 +7,15 @@
 }
 .countriesWithFilter {
     width: 100%;
+    text-transform: capitalize;
+}
+
+/* @media max 620 */
+@media only screen and (max-width: 620px) {
+    .countriesWithFilter th {
+        padding: 0.2rem;
+    }
+    .countriesWithFilter td {
+        padding: 0.2rem;
+    }
 }

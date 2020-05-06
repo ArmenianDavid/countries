@@ -1,13 +1,17 @@
-.letters-container{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
+.letters-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
 }
-.letter{
-  margin: 0.3em;
-  padding: 0.3em;
-  background-color: #f2f2f2;
-  border-radius: 0.2em;
-  cursor: pointer;
-  text-transform: uppercase;
+.letter-container {
+    margin-bottom: 0.3rem;
+}
+.letter {
+    margin: 0.3em;
+    padding: 0.3em;
+    background-color: #f2f2f2;
+    border-radius: 0.2em;
+    cursor: pointer;
+    text-transform: uppercase;
 }

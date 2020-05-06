@@ -3,8 +3,8 @@ import { Route, Switch } from "react-router-dom";
 // components
 import "./App.css";
 import Header from "./Components/Header/Header";
-import List from "./Components/List/List";
-import TableUi from "./Components/MaterialUi/TableUi";
+import CountriesWithClass from "./Components/CountriesWithClass/CountriesWithClass";
+import CountriesWithMaterialUi from "./Components/CountriesWithMaterialUi/CountriesWithMaterialUi";
 import CountriesWithFilter from "./Components/CountriesWithFilter/CountriesWithFilter";
 import WithHooks from "./Components/WithHooks/WithHooks";
 // material ui
@@ -23,8 +23,11 @@ class App extends React.Component {
                         path="/countries-with-filter"
                         component={CountriesWithFilter}
                     />
-                    <Route path="/material-ui" component={TableUi} />
-                    <Route path="/" component={List} exact />
+                    <Route
+                        path="/material-ui"
+                        component={CountriesWithMaterialUi}
+                    />
+                    <Route path="/" component={CountriesWithClass} exact />
                 </Switch>
             </div>
         );

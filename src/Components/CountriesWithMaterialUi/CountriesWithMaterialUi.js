@@ -1,6 +1,6 @@
 import React from "react";
 // components
-import "./TableUi.css";
+import "./CountriesWithMaterialUi.css";
 // material-ui
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Table from "@material-ui/core/Table";
@@ -92,33 +92,6 @@ class TableUi extends React.Component {
                     </Table>
                 </TableContainer>
             </div>
-            // <div className='table-container'>
-            //   <table className='table'>
-            //       <thead className='table-header'>
-            //         <tr className='table-header-row'>
-            //           <td>name</td>
-            //           <td>capital</td>
-            //           <td>population</td>
-            //           <td>area <span>km<sup>2</sup></span></td>
-            //           <td>flag</td>
-            //         </tr>
-            //       </thead>
-
-            //      <tbody>
-            //         {countries.map( country =>{
-            //           return(
-            //             <tr key={country.name}>
-            //               <td>{country.name}</td>
-            //               <td>{country.capital}</td>
-            //               <td>{country.population}</td>
-            //               <td>{country.area}<span></span></td>
-            //               <td><img src={country.flag} alt='flag' width='30px'/></td>
-            //             </tr>
-            //           )
-            //         })}
-            //     </tbody>
-            //   </table>
-            // </div>
         );
     }
 }

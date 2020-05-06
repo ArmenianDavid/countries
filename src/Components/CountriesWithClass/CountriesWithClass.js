@@ -1,6 +1,6 @@
 import React from "react";
 // components
-import "./List.css";
+import "./CountriesWithClass.css";
 // material-ui
 import CircularProgress from "@material-ui/core/CircularProgress";
 

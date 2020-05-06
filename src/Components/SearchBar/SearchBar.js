@@ -37,6 +37,7 @@ class SearchBar extends React.Component {
                 {letters.map((letter) => {
                     return (
                         <div
+                            className="letter-container"
                             key={letter}
                             id={letter}
                             onClick={this.props.filterCountries}
